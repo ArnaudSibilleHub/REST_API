@@ -22,9 +22,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 <script src="../JS/Ajax.js"></script>
 <script src="../JS/tpe_digital_JS.js"></script>  
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
     
-<section class="container">
+<section class="container" id="containerVue">
 	    
 
 <!---------------------------------------------------------------------------------------------------->   
@@ -458,7 +457,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 
 <!-- carte de visite -->
-		
+
+<script>
+import PresentationCard from './components/PresentationCard.vue'
+
+export default {
+	name: 'App',
+	components: {
+		PresentationCard
+	}
+}
+</script>
+
+
+<template>
 
 	<div class="card_container">
         
@@ -475,7 +487,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</li>
 		</ul>
 	</div>
-    
+</template>
+	
+
 	<div class="rs_container">
     <div id="cardContainerRS">
         
@@ -782,8 +796,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 	<!-- fin mentions légales -->
-    
-   
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    const app = new Vue({
+      el: '#containerVue'
+    })
+  </script>    
+   <script>
+        // La console devrait maintenant afficher une fonction
+        console.log(Vue)
+    </script>
 
 </section>
         
